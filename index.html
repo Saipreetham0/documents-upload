@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Submission</h1>
+        <form id="documentForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email id:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email">
+            </div>
+            <div class="form-group">
+                <label for="tenthCertificate">10th certificate</label>
+                <input type="file" id="tenthCertificate" name="tenthCertificate">
+                <button type="button" onclick="previewFile('tenthCertificate')">Preview</button>
+            </div>
+            <div class="form-group">
+                <label for="twelfthCertificate">12th Certificate</label>
+                <input type="file" id="twelfthCertificate" name="twelfthCertificate">
+                <button type="button" onclick="previewFile('twelfthCertificate')">Preview</button>
+            </div>
+            <div class="form-group">
+                <label for="govtCertificate">Govt certificate</label>
+                <input type="file" id="govtCertificate" name="govtCertificate">
+                <button type="button" onclick="previewFile('govtCertificate')">Preview</button>
+            </div>
+            <div class="form-group">
+                <label for="aadharCard">Aadhar card</label>
+                <input type="file" id="aadharCard" name="aadharCard">
+                <button type="button" onclick="previewFile('aadharCard')">Preview</button>
+            </div>
+            <div class="form-group">
+                <label for="passportPhoto">Passport photo</label>
+                <input type="file" id="passportPhoto" name="passportPhoto">
+                <button type="button" onclick="previewFile('passportPhoto')">Preview</button>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="previewIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
